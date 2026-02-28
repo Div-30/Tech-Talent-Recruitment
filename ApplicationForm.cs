@@ -114,6 +114,12 @@ namespace Thursday_Gen_Quiz
                 MessageBox.Show("Submit error: " + ex.Message);
             }
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = new MainDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

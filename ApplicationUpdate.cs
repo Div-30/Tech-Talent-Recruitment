@@ -101,6 +101,13 @@ namespace Thursday_Gen_Quiz
                 MessageBox.Show("Load current data error: " + ex.Message);
             }
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            ApplicationStatus statusForm = new ApplicationStatus();
+            statusForm.Show();
+            this.Hide();
+        }
     }
 }
 

@@ -101,5 +101,12 @@ namespace Thursday_Gen_Quiz
                 updateForm.Show();
                 this.Hide();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            MainDashboard dashboard = new MainDashboard();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

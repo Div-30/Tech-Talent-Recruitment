@@ -34,6 +34,7 @@
             this.positionCombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // saveBtn
@@ -94,11 +95,24 @@
             this.descriptionBox.TabIndex = 44;
             this.descriptionBox.Text = "";
             // 
+            // backBtn
+            // 
+            this.backBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.backBtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(12, 406);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(81, 32);
+            this.backBtn.TabIndex = 75;
+            this.backBtn.Text = "<- Back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // ApplicationUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 450);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.positionCombo);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.ComboBox positionCombo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox descriptionBox;
+        private System.Windows.Forms.Button backBtn;
     }
 }
