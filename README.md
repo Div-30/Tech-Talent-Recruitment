@@ -115,12 +115,10 @@ The following positions are pre-loaded in the database:
 
 | Layer | Technology |
 |---|---|
-| Backend | Python / Django (or framework of choice) |
-| Database | PostgreSQL / SQLite |
-| Frontend | HTML, CSS, JavaScript (or framework of choice) |
-| Authentication | Session-based or JWT |
-
-> Replace the entries above with the actual stack used in your implementation.
+| Backend | C# / ASP.NET Core |
+| Database | SSMS (SQL Server Management Studio) |
+| Frontend | Windows Forms (Visual Studio) |
+| Authentication | BCrypt |
 
 ---
 
@@ -128,9 +126,9 @@ The following positions are pre-loaded in the database:
 
 ### Prerequisites
 
-- Python 3.10+
-- pip
-- A running database instance (PostgreSQL or SQLite for development)
+- .NET SDK 8.0+
+- Visual Studio (with Windows Forms workload)
+- SQL Server Management Studio (SSMS)
 
 ### Installation
 
@@ -139,24 +137,17 @@ The following positions are pre-loaded in the database:
 git clone https://github.com/Div-30/Tech-Talent-Recruitment.git
 cd Tech-Talent-Recruitment
 
-# 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+# 2. Restore dependencies
+dotnet restore
 
-# 3. Install dependencies
-pip install -r requirements.txt
+# 3. Apply database migrations
+dotnet ef database update
 
-# 4. Apply database migrations
-python manage.py migrate
-
-# 5. Seed job positions
-python manage.py loaddata job_positions
-
-# 6. Start the development server
-python manage.py runserver
+# 4. Run the application
+dotnet run
 ```
 
-Open your browser at `http://127.0.0.1:8000`.
+Open the application via Visual Studio or run the built executable directly.
 
 ---
 
@@ -164,9 +155,10 @@ Open your browser at `http://127.0.0.1:8000`.
 
 ### Applicant Flow
 
-1. Navigate to the **Apply** page.
-2. Complete all required fields and submit the form.
-3. Log in to the **Applicant Dashboard** to track your application status, update details, or withdraw your application.
+1. Launch the application.
+2. Navigate to the **Apply** form.
+3. Complete all required fields and submit the form.
+4. Use the **Applicant Dashboard** to track your application status, update details, or withdraw your application.
 
 ### HR Flow
 
