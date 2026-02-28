@@ -115,12 +115,10 @@ The following positions are pre-loaded in the database:
 
 | Layer | Technology |
 |---|---|
-| Backend | Python / Django (or framework of choice) |
-| Database | PostgreSQL / SQLite |
-| Frontend | HTML, CSS, JavaScript (or framework of choice) |
+| Backend | C# / ASP.NET Core |
+| Database | SQL Server / SQLite |
+| Frontend | Razor Pages / HTML, CSS, JavaScript |
 | Authentication | Session-based or JWT |
-
-> Replace the entries above with the actual stack used in your implementation.
 
 ---
 
@@ -128,9 +126,8 @@ The following positions are pre-loaded in the database:
 
 ### Prerequisites
 
-- Python 3.10+
-- pip
-- A running database instance (PostgreSQL or SQLite for development)
+- .NET SDK 8.0+
+- A running database instance (SQL Server or SQLite for development)
 
 ### Installation
 
@@ -139,24 +136,17 @@ The following positions are pre-loaded in the database:
 git clone https://github.com/Div-30/Tech-Talent-Recruitment.git
 cd Tech-Talent-Recruitment
 
-# 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+# 2. Restore dependencies
+dotnet restore
 
-# 3. Install dependencies
-pip install -r requirements.txt
+# 3. Apply database migrations
+dotnet ef database update
 
-# 4. Apply database migrations
-python manage.py migrate
-
-# 5. Seed job positions
-python manage.py loaddata job_positions
-
-# 6. Start the development server
-python manage.py runserver
+# 4. Start the development server
+dotnet run
 ```
 
-Open your browser at `http://127.0.0.1:8000`.
+Open your browser at `http://localhost:5000` (or `https://localhost:5001` for HTTPS).
 
 ---
 
