@@ -116,9 +116,9 @@ The following positions are pre-loaded in the database:
 | Layer | Technology |
 |---|---|
 | Backend | C# / ASP.NET Core |
-| Database | SQL Server / SQLite |
-| Frontend | Razor Pages / HTML, CSS, JavaScript |
-| Authentication | Session-based or JWT |
+| Database | SSMS (SQL Server Management Studio) |
+| Frontend | Windows Forms (Visual Studio) |
+| Authentication | BCrypt |
 
 ---
 
@@ -127,7 +127,8 @@ The following positions are pre-loaded in the database:
 ### Prerequisites
 
 - .NET SDK 8.0+
-- A running database instance (SQL Server or SQLite for development)
+- Visual Studio (with Windows Forms workload)
+- SQL Server Management Studio (SSMS)
 
 ### Installation
 
@@ -142,11 +143,11 @@ dotnet restore
 # 3. Apply database migrations
 dotnet ef database update
 
-# 4. Start the development server
+# 4. Run the application
 dotnet run
 ```
 
-Open your browser at `http://localhost:5000` (or `https://localhost:5001` for HTTPS).
+Open the application via Visual Studio or run the built executable directly.
 
 ---
 
@@ -154,9 +155,10 @@ Open your browser at `http://localhost:5000` (or `https://localhost:5001` for HT
 
 ### Applicant Flow
 
-1. Navigate to the **Apply** page.
-2. Complete all required fields and submit the form.
-3. Log in to the **Applicant Dashboard** to track your application status, update details, or withdraw your application.
+1. Launch the application.
+2. Navigate to the **Apply** form.
+3. Complete all required fields and submit the form.
+4. Use the **Applicant Dashboard** to track your application status, update details, or withdraw your application.
 
 ### HR Flow
 
